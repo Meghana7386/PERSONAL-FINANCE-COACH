@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Your Financial Overview</h1>
+    <p>Income: ${{ budget_data['income'] }}</p>
+    <p>Total Expenses: ${{ budget_data['total_expenses'] }}</p>
+    <p>Savings: ${{ budget_data['savings'] }}</p>
+    <h3>Expense Breakdown:</h3>
+    <ul>
+        {% for expense in budget_data['expenses'] %}
+        <li>Expense: ${{ expense }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+#dashboard.html
